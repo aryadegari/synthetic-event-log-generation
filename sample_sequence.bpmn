@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1x98en9" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0" xmlns:qbp="http://www.qbp-simulator.com/Schema201212">
+  <bpmn:process id="Process_sample_sequence" isExecutable="true">
+    <bpmn:startEvent id="process_start_event" name="process start event">
+      <bpmn:outgoing>Flow_1v46vrr</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_A" name="A">
+      <bpmn:incoming>Flow_1v46vrr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0gd9edk</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1v46vrr" sourceRef="process_start_event" targetRef="Activity_A"/>
+    <bpmn:task id="Activity_B" name="B">
+      <bpmn:incoming>Flow_0gd9edk</bpmn:incoming>
+      <bpmn:outgoing>Flow_1uxg4jb</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0gd9edk" sourceRef="Activity_A" targetRef="Activity_B"/>
+    <bpmn:task id="Activity_C" name="C">
+      <bpmn:incoming>Flow_1uxg4jb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1uh4vtj</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1uxg4jb" sourceRef="Activity_B" targetRef="Activity_C"/>
+    <bpmn:task id="Activity_D" name="D">
+      <bpmn:incoming>Flow_1uh4vtj</bpmn:incoming>
+      <bpmn:outgoing>Flow_0olb0zx</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1uh4vtj" sourceRef="Activity_C" targetRef="Activity_D"/>
+    <bpmn:task id="Activity_E" name="E">
+      <bpmn:incoming>Flow_0olb0zx</bpmn:incoming>
+      <bpmn:outgoing>Flow_0im3h4p</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0olb0zx" sourceRef="Activity_D" targetRef="Activity_E"/>
+    <bpmn:task id="Activity_F" name="F">
+      <bpmn:incoming>Flow_0im3h4p</bpmn:incoming>
+      <bpmn:outgoing>Flow_020a80a</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0im3h4p" sourceRef="Activity_E" targetRef="Activity_F"/>
+    <bpmn:endEvent id="process_end_event" name="process end event">
+      <bpmn:incoming>Flow_020a80a</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_020a80a" sourceRef="Activity_F" targetRef="process_end_event"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_sample_sequence">
+      <bpmndi:BPMNEdge id="Flow_1v46vrr_di" bpmnElement="Flow_1v46vrr">
+        <di:waypoint x="215" y="97"/>
+        <di:waypoint x="270" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gd9edk_di" bpmnElement="Flow_0gd9edk">
+        <di:waypoint x="370" y="97"/>
+        <di:waypoint x="430" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1uxg4jb_di" bpmnElement="Flow_1uxg4jb">
+        <di:waypoint x="530" y="97"/>
+        <di:waypoint x="590" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1uh4vtj_di" bpmnElement="Flow_1uh4vtj">
+        <di:waypoint x="690" y="97"/>
+        <di:waypoint x="750" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0olb0zx_di" bpmnElement="Flow_0olb0zx">
+        <di:waypoint x="850" y="97"/>
+        <di:waypoint x="910" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0im3h4p_di" bpmnElement="Flow_0im3h4p">
+        <di:waypoint x="1010" y="97"/>
+        <di:waypoint x="1070" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_020a80a_di" bpmnElement="Flow_020a80a">
+        <di:waypoint x="1170" y="97"/>
+        <di:waypoint x="1232" y="97"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="process_start_event">
+        <dc:Bounds x="179" y="79" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="165" y="122" width="64" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sxyw5t_di" bpmnElement="Activity_A">
+        <dc:Bounds x="270" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14ko9ac_di" bpmnElement="Activity_B">
+        <dc:Bounds x="430" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1yaq8co_di" bpmnElement="Activity_C">
+        <dc:Bounds x="590" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1oxa84e_di" bpmnElement="Activity_D">
+        <dc:Bounds x="750" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03mqsyh_di" bpmnElement="Activity_E">
+        <dc:Bounds x="910" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fbloa8_di" bpmnElement="Activity_F">
+        <dc:Bounds x="1070" y="57" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1igsnz4_di" bpmnElement="process_end_event">
+        <dc:Bounds x="1232" y="79" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1221" y="122" width="60" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+<qbp:processSimulationInfo xmlns:qbp="http://www.qbp-simulator.com/Schema201212" id="qbp_e7f50047-6186-1424-1d65-206531d9a87e" processInstances="1000" startDateTime="2022-08-01T07:00:00.000Z" currency="EUR"><qbp:arrivalRateDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:arrivalRateDistribution><qbp:timetables><qbp:timetable id="QBP_DEFAULT_TIMETABLE" default="true" name="Default"><qbp:rules><qbp:rule fromTime="09:00:00.000+00:00" toTime="17:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="QBP_247_TIMETABLE" default="false" name="24/7"><qbp:rules><qbp:rule fromTime="00:00:00.000+00:00" toTime="23:59:59.999+00:00" fromWeekDay="MONDAY" toWeekDay="SUNDAY"/></qbp:rules></qbp:timetable></qbp:timetables><qbp:resources><qbp:resource id="QBP_DEFAULT_RESOURCE" name="Default Resource" totalAmount="10" costPerHour="25" timetableId="QBP_DEFAULT_TIMETABLE"/></qbp:resources><qbp:elements><qbp:element id="qbp_6f813c7c-dbd5-884d-e111-fe2fd738b541" elementId="Activity_A"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_214d75ce-0c1b-b58f-88ca-69dbd3717a4f" elementId="Activity_B"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_df1e93f3-c290-a592-90d5-07120fef44f6" elementId="Activity_C"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_f45a620f-7fac-c681-65a3-abd4f7f3ef03" elementId="Activity_D"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_adb7ba84-f681-8895-2dd5-178396d2fbe8" elementId="Activity_E"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_4c427706-05ec-8580-ab0c-f67de3b21666" elementId="Activity_F"><qbp:durationDistribution type="FIXED" mean="1800" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>QBP_DEFAULT_RESOURCE</qbp:resourceId></qbp:resourceIds></qbp:element></qbp:elements><qbp:sequenceFlows><qbp:sequenceFlow/></qbp:sequenceFlows><qbp:statsOptions/></qbp:processSimulationInfo></bpmn:definitions>
